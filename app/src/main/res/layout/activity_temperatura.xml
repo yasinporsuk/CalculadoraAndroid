@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -10,25 +10,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#A17C9FAF"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:layout_editor_absoluteY="100dp">
 
         <!-- Entrada de temperatura -->
         <EditText
             android:id="@+id/etTemperatura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:hint="Introduce la temperatura"
             android:inputType="numberDecimal|numberSigned"
-            android:layout_marginBottom="8dp"/>
+            android:minHeight="48dp" />
 
         <!-- Contenedor horizontal para "Convertir [Unidad 1] a [Unidad 2]" -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
             android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:orientation="horizontal">
 
             <!-- Texto estático: Convertir -->
             <TextView
@@ -44,7 +47,8 @@
                 android:id="@+id/spinnerUnidadInicial"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:minHeight="48dp"/>
 
             <!-- Texto estático: a -->
             <TextView
@@ -61,26 +65,29 @@
                 android:id="@+id/spinnerUnidadDestino"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:minHeight="48dp"/>
         </LinearLayout>
 
         <!-- Botón para convertir -->
         <Button
             android:id="@+id/btnConvertir"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Convertir"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#2D3B94"
+            android:text="Convertir" />
 
         <!-- Texto de resultado -->
         <TextView
             android:id="@+id/tvResultadoTemperatura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="Resultado: "
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"/>
+            android:textAllCaps="false"
+            android:textSize="24sp" />
     </LinearLayout>
 
 

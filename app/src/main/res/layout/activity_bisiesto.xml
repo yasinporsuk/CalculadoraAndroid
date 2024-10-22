@@ -8,26 +8,28 @@
     tools:context=".BisiestoActivity">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#D08F99"
+        android:gravity="center"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:gravity="center">
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/etAnio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#000000"
             android:hint="Introduce un año"
-            android:inputType="number"
-            android:layout_marginBottom="16dp"/>
+            android:inputType="number" />
 
         <Button
             android:id="@+id/btnCalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular"/>
+            android:backgroundTint="#961818"
+            android:text="Calcular" />
 
         <TextView
             android:id="@+id/tvResultado"
