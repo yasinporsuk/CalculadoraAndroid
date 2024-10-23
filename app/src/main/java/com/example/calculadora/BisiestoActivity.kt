@@ -12,18 +12,19 @@ class BisiestoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inicializamos el binding
         binding = ActivityBisiestoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Evento del botón "Calcular"
+        // listener del boton calcular
         binding.btnCalcular.setOnClickListener {
             val anioStr = binding.etAnio.text.toString()
             if (anioStr.isNotEmpty()) {
                 val anio = anioStr.toInt()
+                //verificar si es bisiesto
                 if (esBisiesto(anio)) {
                     binding.tvResultado.text = "Es bisiesto"
                     binding.tvResultado.setTextColor(Color.GREEN)
+
                 } else {
                     binding.tvResultado.text = "No es bisiesto"
                     binding.tvResultado.setTextColor(Color.RED)
@@ -34,7 +35,7 @@ class BisiestoActivity : AppCompatActivity() {
             }
         }
     }
-
+    //metodo bisiesto
     private fun esBisiesto(anio: Int): Boolean {
         return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)
     }
