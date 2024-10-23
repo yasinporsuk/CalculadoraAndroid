@@ -12,11 +12,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inicializamos el binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Eventos de los botones
+        // listener de los botones
         binding.btnBisiesto.setOnClickListener {
             val intent = Intent(this, BisiestoActivity::class.java)
             startActivity(intent)
