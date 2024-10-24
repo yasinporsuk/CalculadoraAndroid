@@ -15,7 +15,7 @@
         android:padding="16dp"
         tools:layout_editor_absoluteY="100dp">
 
-        <!-- Entrada de temperatura -->
+        <!-- entrada temp -->
         <EditText
             android:id="@+id/etTemperatura"
             android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:inputType="numberDecimal|numberSigned"
             android:minHeight="48dp" />
 
-        <!-- Contenedor horizontal para "Convertir [Unidad 1] a [Unidad 2]" -->
+        <!-- contenedor horizontal para "convertir a" -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <!-- Texto estático: Convertir -->
+            <!-- texto Convertir -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- Spinner para la unidad inicial -->
+
             <Spinner
                 android:id="@+id/spinnerUnidadInicial"
                 android:layout_width="0dp"
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 android:minHeight="48dp"/>
 
-            <!-- Texto estático: a -->
+            <!-- texto estatico -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,6 @@
                 android:minHeight="48dp"/>
         </LinearLayout>
 
-        <!-- Botón para convertir -->
         <Button
             android:id="@+id/btnConvertir"
             android:layout_width="match_parent"
@@ -79,7 +78,7 @@
             android:backgroundTint="#2D3B94"
             android:text="Convertir" />
 
-        <!-- Texto de resultado -->
+        <!--resultado -->
         <TextView
             android:id="@+id/tvResultadoTemperatura"
             android:layout_width="match_parent"
